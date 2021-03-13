@@ -51,9 +51,9 @@ Las operaciones concurrentes en el proyecto son:
 
 El sistema se basa en una interfaz web para el front, una apiREST y una base de datos.
 
-A través de inputs en la interfaz se obtienen datos, estos datos se envían a un validator que los valida, cuando los datos son correctamente validados se envían peticiónes (post o get) a la apiREST, esta las maneja conectandose con la base de datos y obteniendo los datos necesarios, luego los envía como respuesta de la petición. Estos datos se obtienen nuevamente en la interfaz y se muestran al usuario o admin.
+A través de inputs en la interfaz se obtienen datos, estos datos se envían a un validador, cuando los datos son correctamente validados se envían peticiónes (post o get) a la apiREST, esta las maneja conectandose con la base de datos y obteniendo los datos necesarios, luego los envía como respuesta de la petición. Estos datos se obtienen nuevamente en la interfaz y se muestran al usuario o admin.
 
-En resumen: Interfaz -> Validator -> apiREST -> base de datos -> apiREST -> Interfaz
+En resumen: Interfaz -> Validador -> apiREST -> Base de datos -> apiREST -> Interfaz
 
 ## Testing
 
