@@ -65,3 +65,4 @@ En resumen: Interfaz -> Validador -> apiREST -> Base de datos -> apiREST -> Inte
 ## Mejoras
 * Encriptación de datos
 * Parte visual más atractiva (frontend)
+* Responsive design
