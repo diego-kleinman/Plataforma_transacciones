@@ -26,9 +26,10 @@ Tener en cuenta que estando en Mac la carpeta en donde se aloje el proyecto debe
 * Transferencias a otras cuentas (propias o de otro usuario)
 * Visualizar cuentas con sus saldos
 * Visualizar movimientos por cuenta
+* El sistema soporta conversión de monedas (si un usuario transfiere a una cuenta con una distinta moneda (ya sea suya o de otro usuario), la moneda se convierte automáticamente
 
 ### Admin:
-* Creación de monedas
+* Creación de monedas (Con sus respectivas conversiones a las demás monedas ya existentes)
 
 ## Base de datos
 
@@ -41,28 +42,28 @@ Para este proyecto use MySQL, entre los motivos que me llevaron a utilizar esta 
 * Muy bien documentada y con un amplio uso
 * Fácil manejo de concurrencia
 
-Por lo que pude averiguar postgreSQL sería una mejor opción a la larga por la facilidad con la que escala, pero implicaba una mayor dificultad de instalación, configuración y uso en general dado que nunca la he manejado.
+PostgreSQL sería una mejor opción a la larga por la facilidad con la que escala, pero implicaba una mayor dificultad de instalación, configuración y uso en general dado que nunca la he manejado.
 
-En cuanto a bases de datos no relacionales estuve bastante tentado a utilizar mongoDB pero al no haberla utilizado antes me decanté por mySQL y el formato de columnas estructurado.
+En cuanto a bases de datos no relacionales pensé en utilizar mongoDB pero al no tener experiencia previa con la misma me decidí por MySQL y el formato de datos estructurado.
 
 ### Diagrama :
 
 ![This is a alt text.](/Database.png "This is a database diagram image.")
 
 ### Concurrencia :
-Para el manejo de la concurrencia en la base de datos utilicé las transacciónes que provee MySQL que aseguran la atomicidad de un proceso sobre la db con rollbacks en caso de que ocurra algún problema en el proceso y commits si todo sale bien. 
+Para el manejo de la concurrencia en la base de datos utilicé el sistema de transacciónes que provee MySQL, las mismas aseguran la atomicidad de un proceso sobre la db y permiten hacer rollbacks en caso de que ocurra algún problema en el proceso o commits si todo sale bien. 
 
 Las operaciones concurrentes en el proyecto son:
 
-* Transferencias -> Implican por un lado restar balance, por otro acreditar y por otro generar el historial de transacciones
+* Transferencias -> Implican por un lado restar balance en la cuenta origen, por otro lado acreditar balance en la cuenta destino y por otro agregar la transacción al historial de transacciones.
 
-* Adición de monedas -> Implican adherir la moneda nueva a la tabla monedas y posteriormente generar todas las conversiónes desde y hacia la moneda con las otras monedas que ya estén presentes en el sistema
+* Adición de monedas -> Implican adherir la moneda nueva a la tabla maestra monedas y posteriormente generar todas las conversiónes desde y hacia la moneda con las otras monedas que ya estén presentes en el sistema para luego insertar esas conversiones en la tabla maestra conversiones.
 
 ## Lógica de negocios
 
 El sistema se basa en una interfaz web para el front(React), una apiREST (ExpressJS,NodeJS) y una base de datos(MySQL).
 
-A través de inputs en la interfaz se obtienen datos, estos datos se envían a un validador, cuando los datos son correctamente validados se envían peticiónes (post o get) a la apiREST, esta las maneja conectandose con la base de datos y obteniendo los datos necesarios, luego los envía como respuesta de la petición. Estos datos se obtienen nuevamente en la interfaz y se muestran al usuario o admin.
+A través de inputs en la interfaz se obtienen datos, estos datos se envían a un validador, cuando los datos son correctamente validados se envían peticiónes (post o get) a la apiREST, esta las maneja conectandose con la base de datos y obteniendo los datos necesarios, luego los envía como respuesta de la petición. Estos datos se obtienen nuevamente en la interfaz y se muestran al usuario.
 
 En resumen: Interfaz -> Validador -> apiREST -> Base de datos -> apiREST -> Interfaz
 
@@ -71,7 +72,12 @@ En resumen: Interfaz -> Validador -> apiREST -> Base de datos -> apiREST -> Inte
 Se realizaron test unitarios para el backend utilizando Jest (login, register, accounts, transactions)
 
 ## Mejoras
-* Encriptación de datos
+
+### Frontend
 * Parte visual más atractiva (frontend)
 * Responsive design
-* Más unit testing del back y testear el front
+* Testing
+
+### Backend
+* Encriptación de datos
+* Aumentar testing
