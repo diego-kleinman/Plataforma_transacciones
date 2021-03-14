@@ -8,10 +8,10 @@ Para ejecutar el proyecto se necesita:
 
 * MySQL -> [aqui](https://dev.mysql.com/downloads/mysql)
 * NodeJS -> [aqui](https://nodejs.org/es/download/)
-* En MySQL crear un usuario de nombre "Test" y password "password" con permisos DBA , usar puerto por defecto (3306) o de lo contrario en el archivo database.js dentro de la carpeta backend dentro de la función "connect" se pueden modificar el user y password a gusto
+* En MySQL crear un usuario de nombre "Test" y password "password" con permisos DBA , usar puerto por defecto (3306) o de lo contrario en el archivo database.js dentro de la carpeta backend dentro de la función "connect" se pueden modificar el user, password y puerto a gusto
 * Posicionarse en la carpeta 'Proyecto' -> ejecutar `npm install` y posteriormente `npm start`
 
-###Credenciales de admin del sistema -> DNI : 11111111 ; PASSWORD : 123 (Se introducen en el login)
+### Credenciales de admin del sistema -> DNI : 11111111 ; PASSWORD : 123 (Se introducen en el login)
 
 Tener en cuenta que estando en Mac la carpeta en donde se aloje el proyecto debe tener permisos de escritura y lectura habilitados para el usuario que se encuentre activo
 
