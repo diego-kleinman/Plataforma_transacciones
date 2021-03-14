@@ -41,7 +41,7 @@ En cuanto a bases de datos no relacionales estuve bastante tentado a utilizar mo
 
 ### Diagrama :
 
-![This is a alt text.](/image/sample.png "This is a sample image.")
+![This is a alt text.](/Database.png "This is a sample image.")
 
 ### Concurrencia :
 Para el manejo de la concurrencia en la base de datos utilicé las transacciónes que provee MySQL que aseguran la atomicidad de un proceso sobre la db con rollbacks en caso de que ocurra algún problema en el proceso y commits si todo sale bien. 
