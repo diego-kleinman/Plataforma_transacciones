@@ -74,3 +74,4 @@ Se realizaron test unitarios para el backend utilizando Jest (login, register, a
 * Encriptación de datos
 * Parte visual más atractiva (frontend)
 * Responsive design
+* Más unit testing del back y testear el front
