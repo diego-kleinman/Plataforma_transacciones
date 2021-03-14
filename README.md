@@ -4,7 +4,7 @@ Este proyecto es una evaluación técnica realizada para la empresa Ripio. Const
 
 ## Instructivo de instalación y recursos necesarios
 
-Para ejecutar el proyecto se necesita tener instalado MySQL -> En mac se puede descargar el archivo `.dmg` desde [aqui] (https://dev.mysql.com/downloads/mysql/).
+Para ejecutar el proyecto se necesita tener instalado MySQL -> En mac se puede descargar el archivo `.dmg` desde [aqui](https://dev.mysql.com/downloads/mysql)
 
 ## Funcionalidades
 
