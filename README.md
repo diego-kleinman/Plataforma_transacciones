@@ -9,7 +9,7 @@ Para ejecutar el proyecto se necesita:
 * MySQL -> [aqui](https://dev.mysql.com/downloads/mysql)
 * NodeJS -> [aqui](https://nodejs.org/es/download/)
 * En MySQL crear un usuario de nombre "Test" y password "password" con permisos DBA , usar puerto por defecto (3306) o de lo contrario en el archivo database.js dentro de la carpeta backend dentro de la función "connect" se pueden modificar el user, password y puerto a gusto
-* Importar el Schema 'Ripio' a MySQL (Archivo Ripio.sql)
+* Importar el Schema 'Ripio' a MySQL ('Ripio.sql')
 * Posicionarse en la carpeta 'Proyecto' -> ejecutar `npm install` y posteriormente `npm start`
 
 * Si se quiere además ejecutar los **test unitarios** se debe importar ('Ripio testing.sql'), posicionarse en la carpeta 'backend' y ejecutar `npm test`
