@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.22, for macos10.15 (x86_64)
 --
--- Host: localhost    Database: Ripio
+-- Host: localhost    Database: Ripio testing
 -- ------------------------------------------------------
 -- Server version	8.0.23
 
@@ -28,7 +28,7 @@ CREATE TABLE `Accounts` (
   `account_Balance` decimal(20,10) NOT NULL COMMENT 'Balance de la cuenta\\n',
   `account_Ci` int NOT NULL COMMENT 'La cédula del usuario dueño de la cuenta',
   PRIMARY KEY (`account_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -37,6 +37,7 @@ CREATE TABLE `Accounts` (
 
 LOCK TABLES `Accounts` WRITE;
 /*!40000 ALTER TABLE `Accounts` DISABLE KEYS */;
+INSERT INTO `Accounts` VALUES (1,1,100.0000000000,47963085),(2,1,100.0000000000,47963086);
 /*!40000 ALTER TABLE `Accounts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +54,7 @@ CREATE TABLE `Coins` (
   `coin_RateUsd` decimal(20,10) NOT NULL COMMENT 'Determina el equivalente en USD de la moneda',
   PRIMARY KEY (`coin_Type`),
   UNIQUE KEY `coin_Name_UNIQUE` (`coin_Name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +63,7 @@ CREATE TABLE `Coins` (
 
 LOCK TABLES `Coins` WRITE;
 /*!40000 ALTER TABLE `Coins` DISABLE KEYS */;
-INSERT INTO `Coins` VALUES (1,'USD',1.0000000000);
+INSERT INTO `Coins` VALUES (1,'USD',1.0000000000),(2,'ETH',1400.0000000000),(3,'BTC',50000.0000000000);
 /*!40000 ALTER TABLE `Coins` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -105,7 +106,7 @@ CREATE TABLE `Transactions` (
   `transaction_AmountFrom` decimal(20,10) NOT NULL COMMENT 'Monto debitado desde la cuenta origen',
   `transaction_AmountTo` decimal(20,10) NOT NULL COMMENT 'Monto acreditado en la cuenta destino',
   PRIMARY KEY (`transaction_Id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -114,6 +115,7 @@ CREATE TABLE `Transactions` (
 
 LOCK TABLES `Transactions` WRITE;
 /*!40000 ALTER TABLE `Transactions` DISABLE KEYS */;
+INSERT INTO `Transactions` VALUES (1,1,2,50.0000000000,50.0000000000),(2,2,1,60.0000000000,60.0000000000);
 /*!40000 ALTER TABLE `Transactions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,7 +139,7 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (11111111,'123');
+INSERT INTO `Users` VALUES (11111111,'123'),(47963085,'1234'),(47963086,'123');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -150,4 +152,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-14 15:33:07
+-- Dump completed on 2021-03-14 18:06:37
