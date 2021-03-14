@@ -50,7 +50,7 @@ const Transfer = () => {
             } catch (error) {
                 let response = error.response
                 if (response.status === 403 || response.status === 406) {
-                    setError(response.data.message)
+                    setMessage(response.data.message)
                 }
                 else {
                     console.log(response);
