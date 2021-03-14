@@ -10,6 +10,8 @@ Para ejecutar el proyecto se necesita:
 * NodeJS -> [aqui](https://nodejs.org/es/download/)
 * Posicionarse en la carpeta 'Proyecto' -> ejecutar `npm install` y posteriormente `npm start`
 
+Tener en cuenta que estando en Mac la carpeta en donde se aloje el proyecto debe tener permisos de escritura y lectura habilitados para el usuario que se encuentre activo
+
 ## Funcionalidades
 
 ### Usuario:
