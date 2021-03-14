@@ -19,7 +19,7 @@ Tener en cuenta que estando en Mac la carpeta en donde se aloje el proyecto debe
 
 ### Usuario:
 * Registro / Login
-* Añadir cuenta (de una cierta moneda)
+* Añadir cuentas (Al no haber funcionalidad de depósitos al añadir una cuenta el usuario puede indicar un monto inicial)
 * Transferencias a otras cuentas (propias o de otro usuario)
 * Visualizar cuentas con sus saldos
 * Visualizar movimientos por cuenta
@@ -57,7 +57,7 @@ Las operaciones concurrentes en el proyecto son:
 
 ## Lógica de negocios
 
-El sistema se basa en una interfaz web para el front, una apiREST y una base de datos.
+El sistema se basa en una interfaz web para el front(React), una apiREST (ExpressJS,NodeJS) y una base de datos(MySQL).
 
 A través de inputs en la interfaz se obtienen datos, estos datos se envían a un validador, cuando los datos son correctamente validados se envían peticiónes (post o get) a la apiREST, esta las maneja conectandose con la base de datos y obteniendo los datos necesarios, luego los envía como respuesta de la petición. Estos datos se obtienen nuevamente en la interfaz y se muestran al usuario o admin.
 
