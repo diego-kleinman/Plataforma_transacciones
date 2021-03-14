@@ -9,6 +9,7 @@ Para ejecutar el proyecto se necesita:
 * MySQL -> [aqui](https://dev.mysql.com/downloads/mysql)
 * NodeJS -> [aqui](https://nodejs.org/es/download/)
 * En MySQL crear un usuario de nombre "Test" y password "password" con permisos DBA , usar puerto por defecto (3306) o de lo contrario en el archivo database.js dentro de la carpeta backend dentro de la función "connect" se pueden modificar el user, password y puerto a gusto
+* Importar el Schema 'Ripio' a MySQL (Archivo Ripio.sql)
 * Posicionarse en la carpeta 'Proyecto' -> ejecutar `npm install` y posteriormente `npm start`
 
 ### Credenciales de admin del sistema -> DNI : 11111111 ; PASSWORD : 123 (Se introducen en el login)
@@ -44,7 +45,7 @@ En cuanto a bases de datos no relacionales estuve bastante tentado a utilizar mo
 
 ### Diagrama :
 
-![This is a alt text.](/Database.png "This is a sample image.")
+![This is a alt text.](/Database.png "This is a database diagram image.")
 
 ### Concurrencia :
 Para el manejo de la concurrencia en la base de datos utilicé las transacciónes que provee MySQL que aseguran la atomicidad de un proceso sobre la db con rollbacks en caso de que ocurra algún problema en el proceso y commits si todo sale bien. 
