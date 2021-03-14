@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_ripio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "concurrently \"cd ./backend && npm install\" \" cd ./frontend && npm install\" ",
+    "start": "concurrently \"cd ./backend && npm start\" \" cd ./frontend && npm start\" "
+  },
+  "author": "diego",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0"
+  }
+}
