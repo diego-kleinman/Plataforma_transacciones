@@ -3,9 +3,8 @@
 Este proyecto es una evaluación técnica realizada para la empresa Ripio. Consta de una base de datos, una apiREST y un cliente web que consume la api.
 
 ## Instructivo de instalación y recursos necesarios
-You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
-This web site is using `markedjs/marked`.
+Para ejecutar el proyecto se necesita tener instalado MySQL -> En mac se puede descargar el archivo `.dmg` desde [aqui] (https://dev.mysql.com/downloads/mysql/).
 
 ## Funcionalidades
 
