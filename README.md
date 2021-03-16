@@ -12,7 +12,7 @@ Para ejecutar el proyecto se necesita:
 * Importar el Schema 'Ripio' a MySQL ('Ripio.sql')
 * Posicionarse en la carpeta 'Proyecto' -> ejecutar `npm install` y posteriormente `npm start`
 
-* Si se quiere además ejecutar los **test unitarios** se debe importar ('Ripio testing.sql'), posicionarse en la carpeta 'backend' y ejecutar `npm test`
+* Si se quiere además ejecutar los **test unitarios** se debe importar el Schema ('Ripio testing.sql'), posicionarse en la carpeta 'backend' y ejecutar `npm test`
 
 ### Credenciales de admin del sistema -> DNI : 11111111 ; PASSWORD : 123 (Se introducen en el login)
 
