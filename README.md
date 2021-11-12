@@ -1,6 +1,8 @@
-# Evaluación Ripio FullStack
+# Descripcion
 
-Este proyecto es una evaluación técnica realizada para la empresa Ripio. Consta de una base de datos, una apiREST y un cliente web que consume la api.
+En este proyecto se creo el back/api/front para una mini plataforma similar a un banco.
+Los usuarios pueden crear un usuario/loggearse, para posteriormente hacer transacciones entre "cuentas bancarias" en distintos tipos de monedas.
+Desde el usuario admin se pueden añadir monedas al sistema.
 
 ## Instructivo de instalación y recursos necesarios
 
